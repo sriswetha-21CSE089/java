@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: 'poppins',sans-serif;
+                box-sizing: border-box;
+                
+            }
+            .hero{
+                height: 100%;
+                width: 100%;
+                margin: 10px;
+                margin-top: 30%;
+            }
+            .formbox{
+                width: 380px;
+                height: 480px;
+                position: relative;
+                margin: 6% auto;
+                background: rgb(204,255,255);
+                padding: 5px;
+                overflow: hidden;
+            }
+            .buttonbox{
+                width: 220px;
+                margin: 35px auto;
+                position: relative;
+                box-shadow: 0 0 20px 9px #ff61241f;
+                border-radius: 30px;
+            }
+            .toggle{
+                padding: 10px 30px;
+                cursor: pointer;
+                background: transparent;
+                border: 0;
+                outline:none;
+                position: relative;
+            }
+            #btn{
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 110px;
+                height: 100%;
+                background: linear-gradient(to right,#ff105f,#ffad96);
+                border-radius: 30px;
+                transition: .5s;
+            }
+            .social{
+                margin: 30px auto;
+                text-align: center;
+            }
+            .social img{
+                width: 30px;
+                margin: 0 12px;
+                box-shadow: 0 0 20px 0 #7f7f7f3d;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            .inputgroup{
+                top: 180px;
+                position: absolute;
+                width: 280px;
+                transition: .5s;   
+            }
+            .infield{
+                width: 100%;
+                padding:10px 0;
+                margin:5px 0;
+                border-left: 0;
+                border-top: 0;
+                border-right:0;
+                border-bottom: 1px solid #999;
+                outline: none;
+                background: transparent;
+            }
+            .submitbtn{
+               width: 85%;
+               padding:10px 30px;
+               cursor: pointer;
+               display: block;
+               margin: auto;
+               background: linear-gradient(to right,#ff105f,#ffad96);
+               border: 0;
+               outline: none;
+               border-radius: 30px;
+            }
+            .cbox{
+                margin:30px 10px 30px 0;
+            }
+            span{
+                color: #777;
+                font-size: 12px;
+                bottom:68px;
+                position: absolute;
+            }
+            #login
+            {
+               left: 50px; 
+            }
+             #signup
+            {
+               left: 450px; 
+            }
+            .close img{
+                width: 5%;
+                height: 5%;
+                margin-right: 0px;
+                margin-left: 350px;
+            }    
+            .whole{
+                width: 33%;
+                height: 100%;
+                margin-left: 60%;
+                position: absolute;
+                display: none;
+            }
+             *{
+                margin: 0;
+                padding: 0;
+                font-family: 'poppins',sans-serif;
+                box-sizing: border-box;
+               
+            }
+            .container
+            {
+              
+                width:100%;
+                min-height: 100vh;
+                background-image:linear-gradient(#000066,rgba(9,0,77,0.65)),url('welcomepic.jpg');
+                background-size: cover;
+                background-position: center;
+                padding: 20px 8%;             
+            }
+            nav{
+                width:100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+            }
+            .logo{
+                width:180px;
+                cursor:pointer;
+            }
+           
+            nav ul{
+                color:white;
+                list-style: none;
+                width:100%;
+                text-align:right;
+                padding-right: 60px;
+            }
+           
+            nav ul li{
+                display: inline-block;
+                margin: 10px 20px;
+            }
+           
+            nav ul li a{
+                color: black;
+                text-decoration: none;
+            }
+           
+            .btn{
+                display: flex;
+                align-items: center;
+                padding:10px 20px;
+                border:0;
+                outline:0;
+                border-radius: 7px;
+                background:#ccffff;
+                color: black;
+                cursor:pointer;
+                margin-left: 5px;
+            }
+            .content{
+                color:black;
+                margin-right: 35%;
+                font-size: 25px;
+            }
+            .content h1{
+                font-size:70px;
+                font-weight: 600;
+                line-height: 85px;
+                margin-bottom: 25px;
+            }
+            .content form{
+             display: flex;
+             align-items: center;
+             background: black;
+            border-radius: 5px;
+            padding:10px;
+            margin-top:30px;
+            }
+            .content form input{
+                border:0;
+                outline: 0;
+                width: 100%;
+                font-size: 16px;
+                padding-left: 10px;
+            }
+            .container form .btn{
+                font-size: 15px;
+                padding:10px 30px;
+            }
+             body{
+                background-image: url('IMG-20230418-WA0001.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+                font-size: 14px;
+            }
+            .containers{
+                width:80%;
+                margin:50px auto;
+            }
+            h1 p{
+                 color: #fff;
+            }
+            .cb{
+                background: #fff;
+                display: flex;
+            }
+            .cl{
+                flex-basis: 60%;
+                padding:40px 60px;
+            }
+            .cr{
+                flex-basis: 40%;
+                padding:40px;
+                background: #1c00b5;
+                color: #fff;
+            }
+            h1{
+                margin-bottom: 10px;
+            }
+            .containers p{
+                  margin-bottom: 40px;
+            }
+            .inputrow{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+            .inputgrp .inputrow{
+                flex-basis: 45%;
+            }
+            input{
+                width: 100%;
+                border:none;
+                border-bottom: 1px solid black;
+                outline:none;
+                padding-bottom: 5px;
+            }
+            textarea{
+                width:100%;
+                border:1px solid #cc;
+                outline: none;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .containers label{
+                margin-bottom: 6px;
+                display: block;
+                color: #1c00b5;
+            }
+            .containers button{
+               background:  #1c00b5;
+               width: 100px;
+               border: none;
+               outline: none;
+               color: #fff;
+               height: 35px;
+               border-radius: 30px;
+                   margin-top: 20px;
+            }
+            tr td:first-child{
+                padding-right: 20px;
+            }
+            tr td{
+                padding-top:  20px;
+            }
+            .cr h3{
+                margin-bottom: 30px;
+            }
+            .whole{
+                width: 33%;
+                height: 100%;
+                margin-left: 60%;
+                position: absolute;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="whole" id="whole1">
+        <div class="hero">
+        <div class="formbox">
+                <div class="close">
+                    <a href="login signup.html"><img src="close.png" alt="k"></a>
+                </div>
+                <div class="buttonbox">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle" onclick="login()">Log in</button>
+                      <button type="button" class="toggle" onclick="signup()">sign up</button>
+                </div>
+                <div class="social">
+                <img src="fb.png">
+                 <img src="tw.png">
+                  <img src="google.png">
+                </div>
+                <form action="valid.jsp" method="post" id="login" class="inputgroup">
+                    <input type="email" name="mail" class="infield" placeholder="Email ID" required>
+                    <input type="password" name="pass" class="infield" placeholder="Enter password" required>
+                    <input type="checkbox" class="cbox"><br><span> Remember password</span>
+                    <input type="submit" class="submitbtn" >
+                </form>
+                <form action="valid.jsp" method="post" id="signup" class="inputgroup">
+                    <input type="text" class="infield" placeholder="User Name" name="user" required>
+                    <input type="email" class="infield" placeholder="Email ID" name="mail" required>
+                    <input type="password" class="infield" placeholder="Enter password" name="pass" required>
+                    <br><br><br><br><br>
+                    <input type="submit" class="submitbtn" >
+                </form>
+            </div>
+        <script>
+            var x =document.getElementById("login");
+            var y =document.getElementById("signup");
+            var z =document.getElementById("btn");
+            
+            function signup(){
+                x.style.left="-400px";
+                 y.style.left="50px";
+                  z.style.left="110px";
+              }
+               function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";
+                 
+            }
+        </script>
+        </div>
+        </div>
+        <div class="container" style="color:white;">
+            <nav>
+                <img src='education.png' class="logo"><h1 id="1">  ENGINEERING  ADMISSIONS </h1>
+                <ul >
+                 
+                    <li><a style="color:white" href='login signup.html'> HOME </a></li>
+                    <li><a style="color:white" href='#contact'>CONTACT US</a></li>
+                </ul>
+                <button class="btn" onclick="myfunction()">LOGIN</button>
+                <button class="btn" onclick="myfunction()">SIGNUP</button>
+            </nav>
+            <div class="content" style="color:white;">
+               
+                <br><br><br> <p style="text-align:justify;">Engineering Admissions 2022 (EA 2022) is a complete online process includes Registration, Payments, Choice Filling, Allotment and Confirmation. Candidates are requested to read the instructions given here completely for the successful completion of their Counseling and Admissions.</p>
+                <br> 
+            </div>
+        </div>
+        <script>
+            function myfunction(){
+                var x=document.getElementById("whole1");
+                x.style.display="block";
+            }
+        </script>
+        <div class="containers" id="contact">
+         <h1>connect with us</h1>
+                <p>We would love to respond to your queries and help you succeed. Feel 
+                 free to get in touch with us.</p>
+                <div class="cb">
+                    <div class="cl">
+                        <h3>send your request</h3> 
+                        <form>
+                            <div class="inputrow">
+                                <div class="inputgrp">
+                                    <label>Name</label>
+                                    <input type="text" placeholder="aaa">
+                                </div>
+                                </div>
+                                <div class="inputrow">
+                                <div class="inputgrp">
+                                    <label>phone</label>
+                                    <input type="text" placeholder="+91 3445">
+                                </div>
+                            </div>
+                             <div class="inputrow">
+                                <div class="inputgrp">
+                                    <label>email</label>
+                                    <input type="email" placeholder="aaa@gmail.com">
+                                </div>
+                             </div>
+                                <div class="inputrow">
+                                <div class="inputgrp">
+                                    <label>subject</label>
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>          
+                                 <label> message</label>
+                                 <textarea rows="5" placeholder="your message"></textarea>
+                                 
+                                 <button type="submit">send</button>
+                        </form>
+                        
+                     </div> 
+                    <div class="cr">
+                        <h3>reach us</h3>     
+                        <table>
+                            <tr>
+                                <td>email</td>
+                                <td>tnea@gmail.com</td>
+                            </tr>
+                             <tr>
+                                <td>Phone</td>
+                                <td>044 2235 1126</td>
+                            </tr>
+                              <tr>
+                                <td>Address</td>
+                                <td>Anna University, Kotturpuram, Chennai, Tamil Nadu 600025</td>
+                            </tr>
+                            
+                        </table>
+                            </div>
+                
+        </div>
+      </div>
+    </body>
+</html>
